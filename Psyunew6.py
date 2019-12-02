@@ -4,9 +4,10 @@ from ctypes import *
 
 
 if 'Windows' in platform.system():
-    Psyuunew=windll.LoadLibrary('Syunew6D.dll')
+    Psyuunew=windll.LoadLibrary('Syunew6D_x64.dll')
+    # Psyuunew=windll.LoadLibrary('Syunew6D.dll')
 else:
-    Psyuunew=cdll.LoadLibrary('libPsyunew6_64.so')
+    Psyuunew=cdll.LoadLibrary('libPsyunew6_x64.so')
     # Psyuunew=cdll.LoadLibrary('libPsyunew6.so')     
 
 

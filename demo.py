@@ -12,7 +12,7 @@ ret=Psyunew6.FindPort(0,KeyPath)
 
 if ret != 0:   
     print('未找到加密锁,请插入加密锁后，再进行操作。\n')
-    os.exit(1)
+    sys.exit(1)
 
 
 ##      用于返回加密狗的ID号，加密狗的ID号由两个长整型组成。

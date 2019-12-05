@@ -1,7 +1,10 @@
 # -- coding: utf-8 --
-import Psyunew6
+
 import sys
+import time
 from ctypes import *
+
+import Psyunew6
 
 
 ret=c_int()
@@ -12,6 +15,7 @@ ret=Psyunew6.FindPort(0,KeyPath)
 
 if ret != 0:   
     print('未找到加密锁,请插入加密锁后，再进行操作。\n')
+    time.sleep(5)
     sys.exit(1)
 
 
@@ -87,3 +91,4 @@ else:
     print('已成功对字符串进行加密，加密后的字符串为:%s\n' % outstring.value)
     print(Psyunew6.StrEnc('abc', '1234567890ABCDEF1234567890ABCDEF'))
 
+time.sleep(5)
